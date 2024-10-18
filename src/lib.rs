@@ -1,6 +1,7 @@
 mod llm {
-    fn ping() {
-        println!("ping!")
+    pub fn ping() -> String {
+        let var: String = "ping".to_string();
+        return var;
     }
 }
 
@@ -8,7 +9,11 @@ mod llm {
 mod tests {
 
     #[test]
+
     fn ping_test() {
-        assert_eq!(0,0);
+        let x: String = crate::llm::ping();
+        // println!(crate::llm::ping().to_string());
+        assert_eq!(0, 0);
     }
 }
+
